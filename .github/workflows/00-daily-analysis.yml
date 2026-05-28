@@ -39,10 +39,10 @@ jobs:
         run: sleep $((RANDOM % 60))  # 随机延迟0-60秒启动
       
       - name: 检出代码
-        uses: actions/checkout@v5
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v5.0.0
       
       - name: 设置 Python 环境
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@82c7e60c1d9ee02dc3656f10092f232da997bba1 # v6.1.0
         with:
           python-version: '3.11'
           cache: 'pip'
@@ -460,7 +460,7 @@ jobs:
           fi
       
       - name: 上传分析报告
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@b4b15b8c7c6ac21ea23f3d865c463302a6668395 # v6.0.0
         if: always()
         with:
           name: analysis-reports-${{ github.run_number }}
